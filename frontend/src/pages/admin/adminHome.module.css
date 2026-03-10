@@ -1,0 +1,118 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 20px;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #1e3c72;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 280px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.cardTitle {
+    margin-bottom: 10px;
+    color: #1e3c72;
+}
+
+.cardText {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.button {
+    margin-top: 10px;
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #2a5298;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    .cards {
+        gap: 15px;
+    }
+
+    .card {
+        width: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page {
+        flex-direction: column;
+        /* Navbar arriba */
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        /* Botón ocupa todo el ancho en móviles */
+    }
+}

@@ -1,0 +1,86 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* mejor que height fija */
+}
+
+/* Contenedor principal + footer */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+/* Área central */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.image {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .image {
+        max-width: 80%;
+        /* tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .page {
+        flex-direction: column;
+        /* navbar arriba */
+    }
+
+    .main {
+        padding: 20px 10px;
+        /* menos padding en móviles */
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .image {
+        max-width: 95%;
+        /* ocupa casi todo en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.2rem;
+        /* más compacto en celulares pequeños */
+    }
+
+    .image {
+        max-width: 100%;
+        /* full width en celulares */
+        border-radius: 6px;
+        /* esquinas más suaves */
+    }
+}

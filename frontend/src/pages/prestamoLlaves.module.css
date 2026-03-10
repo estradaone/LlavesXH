@@ -1,0 +1,334 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1e3c72;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.field input,
+.field select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.field input:focus,
+.field select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Grupo de zona */
+.zonaGroup {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+.zonaLabel {
+    display: block;
+    font-weight: bold;
+    font-size: 15px;
+    color: #1e3c72;
+    margin-bottom: 8px;
+}
+
+/* Checkboxes */
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.checkboxLabel input[type="checkbox"] {
+    accent-color: #007bff;
+    /* color moderno para el check */
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.checkboxLabel input[disabled] {
+    cursor: not-allowed;
+}
+
+.checkboxLabel input[disabled]+span {
+    color: #999;
+}
+
+/* Botones */
+.buttonPrimary {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+.buttonPrimary:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #2a5298, #1e3c72);
+}
+
+.buttonDanger {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease-in-out;
+}
+
+.buttonDanger:hover {
+    background: #a71d2a;
+}
+
+.inputGroup {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 90%;
+    padding: 14px 12px;
+    border: 1px solid #1e3c72;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input:focus {
+    border-color: #2a5298;
+    box-shadow: 0 0 8px rgba(30, 60, 114, 0.3);
+}
+
+.label {
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    color: #1e3c72;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label,
+select_focus + .label {
+    top: -8px;
+    left: 8px;
+    font-size: 0.8rem;
+    color: #2a5298;
+    background: #fff;
+    padding: 0 4px;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #1e3c72;
+    cursor: pointer;
+}
+
+.checkboxLabel input[type="checkbox"] {
+    accent-color: #1e3c72;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* React Select */
+.reactSelect {
+    border: 1px solid #1e3c72;
+    border-radius: 8px;
+}
+
+.select__control {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.select__control--is-focused {
+    border-color: #2a5298 !important;
+    box-shadow: 0 0 8px rgba(30, 60, 114, 0.3) !important;
+}
+
+.select__option--is-focused {
+    background-color: #e6f0ff !important;
+    color: #1e3c72 !important;
+}
+
+.select__option--is-selected {
+    background-color: #1e3c72 !important;
+    color: #fff !important;
+}
+
+/* Modal */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal h3 {
+    margin-bottom: 15px;
+    color: #1e3c72;
+    text-align: center;
+}
+
+.modal input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* react-select custom */
+.react-select__control {
+    border: 1px solid #ccc !important;
+    border-radius: 6px !important;
+    min-height: 40px !important;
+    box-shadow: none !important;
+}
+
+.react-select__control--is-focused {
+    border-color: #007bff !important;
+}
+
+.react-select__option {
+    font-size: 14px;
+    padding: 8px;
+}
+
+.react-select__option--is-selected {
+    background-color: #1e3c72 !important;
+    color: #fff !important;
+}
+
+.react-select__option--is-focused {
+    background-color: #f0f0f0 !important;
+}
+
+/* Animación modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .card {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        max-width: 100%;
+    }
+}
