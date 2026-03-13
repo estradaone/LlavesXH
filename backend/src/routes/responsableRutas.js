@@ -1,15 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const responsableController = require('../controllers/responsableController');
-const { route } = require('./llaveRutas');
 
-//Obtener responsables
+// Obtener responsables
 router.get('/', responsableController.obtenerResponsables);
 // Registrar responsable
 router.post('/', responsableController.registrarResponsable);
+// Cambiar contraseña de responsable
+router.put('/cambiar-password', responsableController.cambiarPassword);
 // Actualizar responsable
 router.put('/:id', responsableController.actualizarResponsable);
-// Elliminar responsable
+// Eliminar responsable
 router.delete('/:id', responsableController.eliminarResponsable);
 
 module.exports = router;

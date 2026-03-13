@@ -132,7 +132,7 @@ function PrestamoLlaves() {
                                             options={llaves.map(l => ({
                                                 value: l.id_llave,
                                                 label: `${l.nombre_llave} (${l.zona_llave}) ${l.estado === "prestada" ? " - Ocupada" :
-                                                        l.estado === "anticipada" ? " - Anticipada" : ""
+                                                    l.estado === "anticipada" ? " - Anticipada" : ""
                                                     }`,
                                                 isDisabled: l.estado === "prestada" || l.estado === "anticipada"
                                             }))}
@@ -265,6 +265,13 @@ function PrestamoLlaves() {
                             </button>
                         </form>
                     </div>
+                    {/* Botón fuera de la tarjeta */}
+                    <button
+                        onClick={() => navigate("/cambiarContraseñaResponsable")}
+                        className={styles.passwordBtn}
+                    >
+                        Cambio de contraseña
+                    </button>
                 </main>
                 <Footer />
             </div>

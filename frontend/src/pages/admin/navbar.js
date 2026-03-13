@@ -45,7 +45,7 @@ function Navbar() {
                 {isLoggedIn ? (
                     <>
                         <Link to="/admin/home" className={styles.link}>Inicio</Link>
-                        <Link to="/admin/llavesPrestadas" className={styles.link}>Llaves Prestadas</Link>
+                        <Link to="/llavesPrestadas" className={styles.link}>Llaves Prestadas</Link>
                         <button onClick={logout} className={styles.logoutBtn}>Cerrar sesión</button>
                     </>
                 ) : (

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styles from "./llavesPrestadas.module.css";
-import Navbar from "../components/navbar";
-// import Footer from "../components/footer";
-import { API_URL } from "../config/api";
+import Navbar from "../../components/navbar";
+// import Footer from "../../components/footer";
+import { API_URL } from "../../config/api";
 
-function LlavesPrestadas() {
+function LlavesPrestadasAdmin() {
     const [llaves, setLlaves] = useState([]);
 
     useEffect(() => {
@@ -68,4 +68,4 @@ function LlavesPrestadas() {
     );
 }
 
-export default LlavesPrestadas;
+export default LlavesPrestadasAdmin;

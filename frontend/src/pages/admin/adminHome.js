@@ -37,7 +37,9 @@ function AdminHome() {
                             <p className={styles.cardText}>
                                 Consulta el listado de llaves que se han prestado.
                             </p>
-                            <button className={styles.button}> Ver registro </button>
+                            <Link to="/admin/registroPrestamoAdmin" className={styles.button}> 
+                                Ir a responsables
+                            </Link>
                         </div>
                     </div>
                 </main>

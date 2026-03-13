@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./registroPrestamos.module.css";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
-import { API_URL } from "../config/api";
+import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
+import { API_URL } from "../../config/api";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function RegistrosPrestamos() {
+function RegistrosPrestamosAdmin() {
     const [prestamos, setPrestamos] = useState([]);
     const [filtro, setFiltro] = useState("hoy");
     const [mes, setMes] = useState(new Date().getMonth() + 1);
@@ -455,4 +455,4 @@ function RegistrosPrestamos() {
     );
 }
 
-export default RegistrosPrestamos;
+export default RegistrosPrestamosAdmin;

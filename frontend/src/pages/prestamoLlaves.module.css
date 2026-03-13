@@ -13,10 +13,11 @@
 }
 
 .main {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
+    padding: 30px;
 }
 
 .card {
@@ -271,6 +272,24 @@ select_focus + .label {
     border-radius: 6px;
     box-sizing: border-box;
     font-size: 14px;
+}
+
+.passwordBtn {
+    position: absolute;
+    top: 0;          /* lo coloca arriba */
+    right: 30px;     /* lo alinea a la derecha */
+    background: #00c6ff;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.passwordBtn:hover {
+    background: #0094cc;
 }
 
 /* react-select custom */
